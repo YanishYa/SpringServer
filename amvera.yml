@@ -2,10 +2,12 @@ meta:
   environment: jvm
   toolchain:
     name: maven
-    version: 17
-
+    version: 16
 build:
-  args: -Dserver.port=80 -Pproduction
-
+  artifacts:
+    build/libs/*.jar: /
 run:
-  jarName: bag-end.jar
+  jarName: main.jar
+  persistenceMount: /data
+  containerPort: "80"
+  servicePort: "80"
