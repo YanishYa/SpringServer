@@ -12,7 +12,7 @@ public class AboutController {
     public String about(@RequestParam(value = "title") String title, Model model)
     {
         model.addAttribute("head", "О нас");
-        model.addAttribute("about", "/about?title=Zdarova eta grechka dlya vas");
+        model.addAttribute("about", "/about?title=О нас");
         model.addAttribute("blog", "/blog");
         if (title == null)
             title = "no title";

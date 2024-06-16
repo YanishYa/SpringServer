@@ -1,0 +1,16 @@
+<div th:fragment="question (question, answer)" xmlns:th="http://www.thymeleaf.org">
+    <div class ="border bg-light rounded" style="border-color:#F1f1f1">
+    <h2 class = "d-flex justify-content-center mt-3" th:text="${question.getName()}"></h2>
+    <div class="container themed-container text-center mt-3 mb-3" bis_skin_checked="1">
+        <div class="container text-center">
+            <div class="row align-items-start">
+                <div class = "col" th:each="thing : ${answer}">
+                        <input type="radio" class="btn-check" th:value = "${thing.getId()}" th:name = "${thing.getName()}" th:id = "${thing.getId()}" autocomplete="off">
+                        <label class="btn" th:text="${thing.getNum()}" th:for="${thing.getId()}"></label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

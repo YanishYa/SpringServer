@@ -26,7 +26,7 @@ public class MainController {
     public String home(Model model) {
         model.addAttribute("head", "Главная страница");
         model.addAttribute("title", "Главная страница");
-        model.addAttribute("about", "/about?title=Privet ");
+        model.addAttribute("about", "/about?title=Подбери свой досуг!!!");
         model.addAttribute("blog", "/blog");
         try {
             List<Place> places = ParseAdapter.getList();
@@ -39,8 +39,8 @@ public class MainController {
     @GetMapping("/mainLog")
     public String hello(Model model){
         model.addAttribute("head", "Главная страница");
-        model.addAttribute("title", "Привет");
-        model.addAttribute("about", "/about?title=Privet ");
+        model.addAttribute("title", "Главная страница");
+        model.addAttribute("about", "/about?title=Подбери свой досуг!!!");
         model.addAttribute("blog", "/blog");
         try {
             List<Place> places = ParseAdapter.getList();

@@ -9,7 +9,7 @@ public class BlogController {
     @GetMapping("/blog")
     public String blogMain(Model model)
     {
-        model.addAttribute("about", "/about?title=Zdarova eta grechka dlya vas");
+        model.addAttribute("about", "/about?title=");
         model.addAttribute("head", "Блог");
         return "blog-main";
     }

@@ -12,25 +12,26 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Список</h1>
-                    <p class="lead text-body-secondary">Небольшой список того, что спарсилось</p>
+                    <h1 class="fw-light">Веб приложение для персонализированного подбора досуга</h1>
                 </div>
             </div>
         </section>
 
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <th:block th:each="item : ${places}">
-                        <div class="col" th:replace="blocks/place::place (name = ${item.name})"></div>
-                    </th:block>
-                </div>
+        <div class="py-5 text-center container">
+            <div class="mt-2">
+                <p class="lead">
+                    Данное веб-приложение создано для того, чтобы упростить нахождение мест, где люди могут провести свое время с пользой или просто отдохнуть
+                </p>
+            </div>
+            <div class="py-5 text-center container">
+                <p class="lead">
+                    Для того, чтобы получить рекомендованную нейросетью категорию, необходимо будет пройти тест, состоящий из 10 вопросов, ответьте на каждый из них максимально честно, исходя из ваших текущих возожностей, желаний и потребностей и сможете получить желаемый результат
+                </p>
             </div>
         </div>
         <div class = "text-center container">
-            <form action = "#" th:action="@{/refreshPlaces}" method="get">
-                <button type="submit" class ="btn btn-primary">Обновить список</button>
+            <form action = "#" th:action="@{/questions}" method="get">
+                <button type="submit" class ="btn btn-primary">Нажмите для прохождения теста</button>
             </form>
         </div>
     </main>

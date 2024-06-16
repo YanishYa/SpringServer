@@ -12,8 +12,7 @@ public class ParseAdapter {
         TripadvisorParce tripadvisorParce = new TripadvisorParce();
         List<Place> places = tripadvisorParce.getParse();
         KudaGoParse kudaGoParse = new KudaGoParse();
-        List<Place> pl = kudaGoParse.getParse();
-        for (Place item : pl){
+        for (Place item : kudaGoParse.getParse()){
             places.add(item);
         }
         return places;
