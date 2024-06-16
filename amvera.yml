@@ -2,10 +2,11 @@ meta:
   environment: jvm
   toolchain:
     name: maven
-    version: 16
+    version: 17
 build:
   artifacts:
-    build/libs/*.jar: /
+    target/*.jar
+  args: spring-boot:repackage
 run:
   jarName: SpringServer-0.0.1-SNAPSHOT.jar
   persistenceMount: /data
